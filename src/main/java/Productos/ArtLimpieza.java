@@ -8,7 +8,7 @@ public class ArtLimpieza extends Producto{
 
     @Override
     protected String tipoProducto() {
-        return "de Limpieza";
+        return " de Limpieza";
     }
 
     @Override
