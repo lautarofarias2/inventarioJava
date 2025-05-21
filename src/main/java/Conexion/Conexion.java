@@ -1,3 +1,4 @@
+package Conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -5,7 +6,7 @@ import java.sql.DriverManager;
 public class Conexion {
     public static Connection getConnection() {
         Connection conexion = null;
-        String baseDatos = "inventariodeproductos";
+        String baseDatos = "inventario_db";
         String url = "jdbc:mysql://localhost:3306/" + baseDatos;
         String usuario = "root";
         String password = "Dinosaurio02";
