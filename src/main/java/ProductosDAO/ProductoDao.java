@@ -50,7 +50,6 @@ public class ProductoDao implements IProductoDao {
     @Override
     public Boolean agregarProducto(ProductoAbstracto producto) {
         PreparedStatement ps;
-        ResultSet rs;
         Connection con = getConnection();
         String sql = "INSERT INTO producto(nombre,descripcion,precio,stock) VALUES(?,?,?,?)";
         try {
@@ -77,7 +76,6 @@ public class ProductoDao implements IProductoDao {
     @Override
     public Boolean eliminarProducto(ProductoAbstracto productoAbstracto) {
         PreparedStatement ps;
-        ResultSet rs;
         Connection con = getConnection();
         String sql = "DELETE FROM producto WHERE id = ?";
         try{
@@ -101,9 +99,8 @@ public class ProductoDao implements IProductoDao {
     @Override
     public Boolean modificarStock(ProductoAbstracto producto) {
         System.out.println("Ingrese el stock: ");
-        Integer stockNuevo = sc.nextInt();
+        Integer stockNuevo = Integer.parseInt(sc.nextLine());
         PreparedStatement ps;
-        ResultSet rs;
         Connection con = getConnection();
         String sql = "UPDATE producto SET stock = ? WHERE id = ?";
         try{
@@ -131,7 +128,6 @@ public class ProductoDao implements IProductoDao {
         String input = sc.nextLine();
         Double precioNuevo = Double.parseDouble(input);
         PreparedStatement ps;
-        ResultSet rs;
         Connection con = getConnection();
         String sql = "UPDATE producto SET precio = ? WHERE id = ?";
         try{
@@ -158,7 +154,6 @@ public class ProductoDao implements IProductoDao {
         System.out.println("Ingrese el nombre: ");
         String nombreNuevo = sc.nextLine();
         PreparedStatement ps;
-        ResultSet rs;
         Connection con = getConnection();
         String sql = "UPDATE producto SET nombre = ? WHERE id = ?";
         try{
@@ -185,7 +180,6 @@ public class ProductoDao implements IProductoDao {
         System.out.println("Ingrese el descripcion: ");
         String descripcionNuevo = sc.nextLine();
         PreparedStatement ps;
-        ResultSet rs;
         Connection con = getConnection();
         String sql = "UPDATE producto SET descripcion = ? WHERE id = ?";
         try{

@@ -21,7 +21,7 @@ public class Producto extends ProductoAbstracto {
 
     @Override
     public String toString() {
-        return "Producto: " + this.id + " Nombre: " + this.nombre + " Precio: " + this.precio;
+        return "Producto: " + this.id + "| Nombre: " + this.nombre + "| Precio: " + this.precio + "| Stock: " + this.stock;
     }
 
 }
